@@ -156,6 +156,7 @@ aside{
       }
     }
     .bar-skill{
+      cursor: pointer;
       margin: 2rem 0;
       height: 5px;
       background: var(--hint);
@@ -287,11 +288,10 @@ footer{
     }
     textarea{
       resize: none;
-      box-sizing: border-box;
       outline: none;
       border: 0;
       min-width: 250px;
-      padding: 1rem 2rem;
+      padding: 1rem 1rem;
       line-height: 2rem;
     }
     button{

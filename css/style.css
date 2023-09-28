@@ -310,6 +310,7 @@ aside .block p {
   }
 }
 aside .block .bar-skill {
+  cursor: pointer;
   margin: 2rem 0;
   height: 5px;
   background: var(--hint);
@@ -449,11 +450,10 @@ footer form input {
 }
 footer form textarea {
   resize: none;
-  box-sizing: border-box;
   outline: none;
   border: 0;
   min-width: 250px;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   line-height: 2rem;
 }
 footer form button {
