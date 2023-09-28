@@ -211,6 +211,23 @@ aside{
       }
     }
   }
+  .legge{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    @include lg{
+      display: none;
+    }
+    @include md{
+      font-size: 1.4rem;
+    }
+    @include sm{
+      font-size: 1.3rem; 
+    }
+    @include xs{
+      font-size: 1.3rem;
+    }
+  }
 }
 
 main{
@@ -254,19 +271,20 @@ main{
   .legge{
     margin-top: 15rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 900;
+    @include lg{
+      margin-top: 10rem;
+      font-size: 1.7rem;
+    }
     @include md{
-      margin: 0rem;
-      font-size: 1.5rem;
+      display: none;
     }
     @include sm{
-      margin: 0rem;
-      font-size: 1.5rem;
+      display: none;
     }
     @include xs{
-      margin: 0rem;
-      font-size: 1.2rem;
+      display: none;
     }
   }
 }

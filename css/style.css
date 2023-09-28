@@ -364,6 +364,31 @@ aside .block .social-container a i {
   margin-right: 1rem;
   font-size: 2rem;
 }
+aside .legge {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  aside .legge {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  aside .legge {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  aside .legge {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 576px) {
+  aside .legge {
+    font-size: 1.3rem;
+  }
+}
 
 main {
   grid-area: main;
@@ -411,25 +436,28 @@ main .experience .content p {
 main .legge {
   margin-top: 15rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 900;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  main .legge {
+    margin-top: 10rem;
+    font-size: 1.7rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   main .legge {
-    margin: 0rem;
-    font-size: 1.5rem;
+    display: none;
   }
 }
 @media (max-width: 767px) {
   main .legge {
-    margin: 0rem;
-    font-size: 1.5rem;
+    display: none;
   }
 }
 @media (max-width: 576px) {
   main .legge {
-    margin: 0rem;
-    font-size: 1.2rem;
+    display: none;
   }
 }
 
