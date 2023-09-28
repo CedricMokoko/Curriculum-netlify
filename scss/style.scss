@@ -270,53 +270,32 @@ footer{
   }
   h2{
     margin-bottom: 3rem;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
   }
   form{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    .prefix{
-      background: linear-gradient(to right, var(--dark), var(--light));
-      padding: 1rem 2rem;
-      color: white;
-      font-size: 2rem;
-      border-bottom-left-radius: 0.5rem;
-      border-top-left-radius: 0.5rem;
-      @include lg{
-        padding: 1rem;
-      }
-      @include md{
-        padding: 1rem;
-      }
-      @include sm{
-        padding: 1rem;
-      }
-      @include xs{
-        padding: 1rem;
-      }
-    }
     input{
-      outline: 0;
+      margin-bottom: 2rem;
+      outline: none;
       border: 0;
       min-width: 250px;
       padding: 1rem 2rem;
       line-height: 2rem;
-      @include lg{
-        min-width: 230px;
-      }
-      @include md{
-        min-width: 210px;
-      }
-      @include sm{
-        min-width: 200px;
-      }
-      @include xs{
-        min-width: 200px;
-      }
-      &::placeholder{
-        color: var(--text);
-      }
+    }
+    textarea{
+      resize: none;
+      box-sizing: border-box;
+      outline: none;
+      border: 0;
+      min-width: 250px;
+      padding: 1rem 2rem;
+      line-height: 2rem;
     }
     button{
+      margin-top: 2rem;
       background: var(--text);
       border: 0;
       cursor: pointer;
@@ -331,17 +310,9 @@ footer{
         font-size: 2rem;
         border-bottom-right-radius: 0.5rem;
         border-top-right-radius: 0.5rem;
-        @include lg{
-          padding: 1rem;
-        }
-        @include md{
-          padding: 1rem;
-        }
-        @include sm{
-          padding: 1rem;
-        }
-        @include xs{
-          padding: 1rem;
+        min-width: 250px;
+        span{
+          margin-left: 1rem;
         }
       }
     }
