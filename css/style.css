@@ -366,17 +366,17 @@ aside .block .social-container a i {
 }
 aside .legge {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 900;
 }
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
   aside .legge {
     display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 993px) and (max-width: 1200px) {
   aside .legge {
-    font-size: 1.4rem;
+    display: none;
   }
 }
 @media (max-width: 767px) {

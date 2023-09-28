@@ -213,13 +213,13 @@ aside{
   }
   .legge{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 900;
-    @include lg{
+    @include xl{
       display: none;
     }
-    @include md{
-      font-size: 1.4rem;
+    @include lg{
+      display: none;
     }
     @include sm{
       font-size: 1.3rem; 
