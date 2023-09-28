@@ -251,6 +251,24 @@ main{
       }
     }
   }
+  .legge{
+    margin-top: 15rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    @include md{
+      margin: 0rem;
+      font-size: 1.5rem;
+    }
+    @include sm{
+      margin: 0rem;
+      font-size: 1.5rem;
+    }
+    @include xs{
+      margin: 0rem;
+      font-size: 1.2rem;
+    }
+  }
 }
 
 footer{
@@ -283,7 +301,7 @@ footer{
       outline: none;
       border: 0;
       min-width: 250px;
-      padding: 1rem 2rem;
+      padding: 1rem;
       line-height: 2rem;
     }
     textarea{
@@ -291,7 +309,7 @@ footer{
       outline: none;
       border: 0;
       min-width: 250px;
-      padding: 1rem 1rem;
+      padding: 1rem;
       line-height: 2rem;
     }
     button{

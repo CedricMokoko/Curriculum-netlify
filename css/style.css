@@ -408,6 +408,30 @@ main .experience .content h3 {
 main .experience .content p {
   margin: 0;
 }
+main .legge {
+  margin-top: 15rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  main .legge {
+    margin: 0rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  main .legge {
+    margin: 0rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 576px) {
+  main .legge {
+    margin: 0rem;
+    font-size: 1.2rem;
+  }
+}
 
 footer {
   display: flex;
@@ -445,7 +469,7 @@ footer form input {
   outline: none;
   border: 0;
   min-width: 250px;
-  padding: 1rem 2rem;
+  padding: 1rem;
   line-height: 2rem;
 }
 footer form textarea {
@@ -453,7 +477,7 @@ footer form textarea {
   outline: none;
   border: 0;
   min-width: 250px;
-  padding: 1rem 1rem;
+  padding: 1rem;
   line-height: 2rem;
 }
 footer form button {
