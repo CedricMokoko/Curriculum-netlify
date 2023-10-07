@@ -35,6 +35,7 @@ ul {
 a {
   color: var(--text);
   text-decoration: none;
+  background-color: transparent;
 }
 
 img {
@@ -218,7 +219,7 @@ header {
 }
 @media (max-width: 576px) {
   header {
-    padding: 5rem 2rem;
+    padding: 5rem 0rem;
   }
 }
 header h1 {
@@ -307,10 +308,21 @@ aside {
   grid-area: aside;
   background: var(--background);
   padding: 5rem;
+  animation: fadeIn 3s;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  aside {
+    padding: 3rem 12rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+  aside {
+    padding: 3rem 10rem;
+  }
 }
 @media (max-width: 576px) {
   aside {
-    padding: 3rem 2rem;
+    padding: 3rem 6rem;
   }
 }
 aside .block {
@@ -414,6 +426,7 @@ aside .legge {
 main {
   grid-area: main;
   padding: 5rem;
+  animation: fadeIn 3s;
 }
 @media (min-width: 577px) and (max-width: 767px) {
   main {
@@ -459,10 +472,6 @@ main .legge {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 900;
-  transition: transform 0.5s ease;
-}
-main .legge:hover {
-  transform: scale(1.1);
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   main .legge {

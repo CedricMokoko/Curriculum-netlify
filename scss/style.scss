@@ -73,7 +73,7 @@ header {
     padding: 4rem;
   }
   @include xs {
-    padding: 5rem 2rem;
+    padding: 5rem 0rem;
   }
   h1 {
     font-size: 5rem;
@@ -144,8 +144,15 @@ aside {
   grid-area: aside;
   background: var(--background);
   padding: 5rem;
+  animation: fadeIn 3s;
+  @include md {
+    padding: 3rem 12rem;
+  }
+  @include sm {
+    padding: 3rem 10rem;
+  }
   @include xs {
-    padding: 3rem 2rem;
+    padding: 3rem 6rem;
   }
   .block {
     margin-bottom: 5rem;
@@ -239,6 +246,8 @@ aside {
 main {
   grid-area: main;
   padding: 5rem;
+  animation: fadeIn 3s;
+
   @include sm {
     padding: 5rem 1.5rem;
   }
@@ -279,10 +288,6 @@ main {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 900;
-    transition: transform 0.5s ease;
-    &:hover {
-      transform: scale(1.1);
-    }
     @include lg {
       margin-top: 10rem;
       font-size: 1.3rem;
