@@ -12,6 +12,7 @@ body {
   font-family: var(--font-family);
   color: var(--text);
   font-size: 1.6rem;
+  cursor: default;
 }
 
 p {
@@ -89,6 +90,21 @@ img {
   left: calc(50% - 5px);
 }
 
+.formazione,
+.esperienza,
+.content-legge {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.formazione.appear,
+.esperienza.appear,
+.content-legge.appear {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .title-small {
   letter-spacing: 0.5rem;
   font-size: 1.7rem;
@@ -101,26 +117,6 @@ img {
   color: var(--hint);
 }
 
-@keyframes bounce {
-  0% {
-    transform: rotate(-45deg);
-  }
-  10% {
-    transform: rotate(-35deg);
-  }
-  70% {
-    transform: rotate(20deg);
-  }
-  80% {
-    transform: rotate(-10deg);
-  }
-  90% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -129,6 +125,25 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+.animation-skills {
+  transition: transform 0.2s ease;
+}
+.animation-skills:hover {
+  transform: scale(1.1);
+}
+
+/* Button Form*/
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 /* Landscape phones and down*/
@@ -143,12 +158,12 @@ html {
     font-size: 50%;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   html {
     font-size: 50%;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   html {
     font-size: 50%;
   }
@@ -169,12 +184,12 @@ html {
     grid: "picture header" auto "aside main" 1fr "footer footer"/320px auto;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   .grid-container {
     grid: "header header" auto "picture main" auto "aside aside" auto "footer footer"/250px auto;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .grid-container {
     grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto/auto;
   }
@@ -196,7 +211,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   header {
     padding: 4rem;
   }
@@ -219,14 +234,14 @@ header h1 {
     margin: 0;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   header h1 {
     font-size: 4rem;
     letter-spacing: 2rem;
     margin: 0;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   header h1 {
     font-size: 3rem;
     letter-spacing: 1.5rem;
@@ -243,14 +258,14 @@ header h1 {
 header p {
   letter-spacing: 0.5rem;
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   header p {
     margin: 0;
   }
 }
 header span {
   display: inline-block;
-  animation: fadeIn 3s;
+  animation: fadeIn 5s;
   font-family: "Pangolin", cursive;
 }
 
@@ -264,12 +279,12 @@ header span {
     padding: 6rem;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   .picture {
     padding: 5rem;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   .picture {
     padding: 10rem;
   }
@@ -281,6 +296,11 @@ header span {
 }
 .picture img {
   border-radius: 50%;
+  opacity: 0.9;
+  transition: transform 0.5s ease;
+}
+.picture img:hover {
+  transform: scale(1.3);
 }
 
 aside {
@@ -297,6 +317,7 @@ aside .block {
   margin-bottom: 5rem;
 }
 aside .block h3 {
+  cursor: default;
   margin-bottom: 0;
   font-size: 1.3rem;
 }
@@ -369,7 +390,7 @@ aside .legge {
   font-size: 1.4rem;
   font-weight: 900;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   aside .legge {
     display: none;
   }
@@ -379,7 +400,7 @@ aside .legge {
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   aside .legge {
     font-size: 1.3rem;
   }
@@ -394,7 +415,7 @@ main {
   grid-area: main;
   padding: 5rem;
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   main {
     padding: 5rem 1.5rem;
   }
@@ -436,21 +457,25 @@ main .experience .content p {
 main .legge {
   margin-top: 15rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 900;
+  transition: transform 0.5s ease;
+}
+main .legge:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   main .legge {
     margin-top: 10rem;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
 }
-@media (min-width: 768px) and (max-width: 992px) {
+@media (max-width: 992px) {
   main .legge {
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   main .legge {
     display: none;
   }
@@ -472,7 +497,7 @@ footer {
   padding: 5rem;
   background: var(--text);
 }
-@media (max-width: 767px) {
+@media (min-width: 577px) and (max-width: 767px) {
   footer {
     padding: 5rem 0rem;
   }
@@ -499,6 +524,11 @@ footer form input {
   min-width: 250px;
   padding: 1rem;
   line-height: 2rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease;
+}
+footer form input:hover {
+  transform: scale(1.1);
 }
 footer form textarea {
   resize: none;
@@ -507,6 +537,11 @@ footer form textarea {
   min-width: 250px;
   padding: 1rem;
   line-height: 2rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease;
+}
+footer form textarea:hover {
+  transform: scale(1.1);
 }
 footer form button {
   margin-top: 2rem;
@@ -517,14 +552,14 @@ footer form button {
 }
 footer form button:hover {
   opacity: 0.8;
+  animation: pulse 0.5s infinite;
 }
 footer form button .postfix {
   background: linear-gradient(to right, var(--dark), var(--light));
   padding: 1rem 2rem;
   color: white;
   font-size: 2rem;
-  border-bottom-right-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-radius: 0.5rem;
   min-width: 250px;
 }
 footer form button .postfix span {
