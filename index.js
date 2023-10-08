@@ -3,8 +3,8 @@ function isElementInViewport(el) {
   const windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
   const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-  const elementCenterX = rect.left + rect.width / 5.5;
-  const elementCenterY = rect.top + rect.height / 5.5;
+  const elementCenterX = rect.left + rect.width / 6;
+  const elementCenterY = rect.top + rect.height / 6;
 
   return (
     elementCenterX >= 0 &&
