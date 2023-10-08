@@ -109,7 +109,7 @@ header {
   }
   span {
     display: inline-block;
-    animation: fadeIn 5s;
+    animation: fadeIn 2s;
     font-family: "Pangolin", cursive;
   }
 }
@@ -144,7 +144,7 @@ aside {
   grid-area: aside;
   background: var(--background);
   padding: 5rem;
-  animation: fadeIn 3s;
+  animation: fadeIn 1s;
   @include md {
     padding: 3rem 12rem;
   }
@@ -246,7 +246,7 @@ aside {
 main {
   grid-area: main;
   padding: 5rem;
-  animation: fadeIn 3s;
+  animation: fadeIn 1s;
 
   @include sm {
     padding: 5rem 1.5rem;
@@ -260,6 +260,9 @@ main {
   p {
     letter-spacing: 0.1rem;
     line-height: 3rem;
+  }
+  .formazione {
+    animation: fadeIn 1s;
   }
   .experience {
     display: flex;

@@ -3,8 +3,8 @@ function isElementInViewport(el) {
   const windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
   const windowWidth = window.innerWidth || document.documentElement.clientWidth;
-  const elementCenterX = rect.left + rect.width / 3;
-  const elementCenterY = rect.top + rect.height / 3;
+  const elementCenterX = rect.left + rect.width / 5.5;
+  const elementCenterY = rect.top + rect.height / 5.5;
 
   return (
     elementCenterX >= 0 &&
@@ -16,13 +16,8 @@ function isElementInViewport(el) {
 
 // Funzione per attivare l'animazione quando l'elemento è visibile
 function handleScroll() {
-  const formazioneSection = document.querySelector(".formazione");
   const esperienzaSection = document.querySelector(".esperienza");
   const leggeSection = document.querySelector(".content-legge");
-
-  if (isElementInViewport(formazioneSection)) {
-    formazioneSection.classList.add("appear");
-  }
 
   if (isElementInViewport(esperienzaSection)) {
     esperienzaSection.classList.add("appear");
@@ -34,7 +29,6 @@ function handleScroll() {
 
   // Verifica se tutti gli elementi sono stati animati
   const allSectionsAnimated =
-    formazioneSection.classList.contains("appear") &&
     esperienzaSection.classList.contains("appear") &&
     leggeSection.classList.contains("appear");
 

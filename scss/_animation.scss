@@ -9,6 +9,18 @@
   }
 }
 
+.esperienza,
+.content-legge {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.esperienza.appear,
+.content-legge.appear {
+  opacity: 1;
+  transform: scale(1);
+}
 .animation-skills {
   transition: transform 0.2s ease;
   &:hover {
