@@ -50,47 +50,6 @@ img {
   margin-bottom: 2rem !important;
 }
 
-/*Progress bar*/
-.pb9 {
-  width: 90%;
-}
-
-.pb8 {
-  width: 80%;
-}
-
-.pb7 {
-  width: 70%;
-}
-
-.pb6 {
-  width: 60%;
-}
-
-.pb5 {
-  width: 50%;
-}
-
-.dot-pb9 {
-  left: calc(90% - 5px);
-}
-
-.dot-pb8 {
-  left: calc(80% - 5px);
-}
-
-.dot-pb7 {
-  left: calc(70% - 5px);
-}
-
-.dot-pb6 {
-  left: calc(60% - 5px);
-}
-
-.dot-pb5 {
-  left: calc(50% - 5px);
-}
-
 .title-small {
   letter-spacing: 0.5rem;
   font-size: 1.7rem;
@@ -133,18 +92,6 @@ img {
   transform: scale(1.1);
 }
 
-/* Button Form*/
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /* Landscape phones and down*/
 /* Landscape phone to portrait tablet*/
 /*Portrait tablet to landscape and desktop*/
@@ -209,7 +156,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 1s;
+  transition: 1s ease-in-out;
 }
 @media (min-width: 577px) and (max-width: 767px) {
   header {
@@ -228,21 +175,16 @@ header h1 {
   font-weight: 300;
   letter-spacing: 3rem;
 }
-@media (min-width: 993px) and (max-width: 1200px) {
-  header h1 {
-    letter-spacing: 3rem;
-  }
-}
 @media (max-width: 992px) {
   header h1 {
     font-size: 5rem;
-    letter-spacing: 3rem;
+    letter-spacing: 2.5rem;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
   header h1 {
-    font-size: 4rem;
-    letter-spacing: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: 2rem;
   }
 }
 @media (max-width: 576px) {
@@ -310,16 +252,19 @@ aside {
 @media (min-width: 768px) and (max-width: 992px) {
   aside {
     padding: 3rem 5rem;
+    animation: none;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
   aside {
     padding: 3rem 8rem;
+    animation: none;
   }
 }
 @media (max-width: 576px) {
   aside {
-    padding: 3rem 6rem;
+    padding: 3rem 5rem;
+    animation: none;
   }
 }
 aside .block {
@@ -347,12 +292,12 @@ main {
 }
 @media (min-width: 577px) and (max-width: 767px) {
   main {
-    padding: 5rem 1.5rem;
+    padding: 5rem 2rem;
   }
 }
 @media (max-width: 576px) {
   main {
-    padding: 5rem 1.5rem;
+    padding: 5rem 2rem;
   }
 }
 main h2 {
@@ -388,7 +333,7 @@ main .experience .content p {
   margin: 0;
 }
 main .legge {
-  margin-top: 15rem;
+  margin-top: 12rem;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 900;
@@ -396,7 +341,7 @@ main .legge {
 @media (min-width: 993px) and (max-width: 1200px) {
   main .legge {
     margin-top: 10rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 992px) {
@@ -413,7 +358,7 @@ main .legge {
 }
 @media (max-width: 576px) {
   main .legge {
-    margin-top: 6rem;
+    margin-top: 8rem;
     font-size: 1.2rem;
   }
 }

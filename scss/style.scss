@@ -64,7 +64,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 1s;
+  transition: 1s ease-in-out;
   @include sm {
     padding: 4rem;
   }
@@ -77,16 +77,13 @@ header {
     line-height: 8rem;
     font-weight: 300;
     letter-spacing: 3rem;
-    @include lg {
-      letter-spacing: 3rem;
-    }
     @include md-lt {
       font-size: 5rem;
-      letter-spacing: 3rem;
+      letter-spacing: 2.5rem;
     }
     @include sm {
-      font-size: 4rem;
-      letter-spacing: 2.5rem;
+      font-size: 3rem;
+      letter-spacing: 2rem;
     }
     @include xs {
       font-size: 3rem;
@@ -128,6 +125,7 @@ header {
     border-radius: 50%;
     opacity: 0.9;
     transition: transform 0.5s ease;
+
     &:hover {
       transform: scale(1.3);
     }
@@ -141,12 +139,15 @@ aside {
   animation: fadeIn 1s;
   @include md {
     padding: 3rem 5rem;
+    animation: none;
   }
   @include sm {
     padding: 3rem 8rem;
+    animation: none;
   }
   @include xs {
-    padding: 3rem 6rem;
+    padding: 3rem 5rem;
+    animation: none;
   }
   .block {
     margin-bottom: 5rem;
@@ -169,12 +170,11 @@ main {
   grid-area: main;
   padding: 5rem;
   animation: fadeIn 1s;
-
   @include sm {
-    padding: 5rem 1.5rem;
+    padding: 5rem 2rem;
   }
   @include xs {
-    padding: 5rem 1.5rem;
+    padding: 5rem 2rem;
   }
   h2 {
     margin-bottom: 6rem;
@@ -209,13 +209,13 @@ main {
     }
   }
   .legge {
-    margin-top: 15rem;
+    margin-top: 12rem;
     text-align: center;
     font-size: 1.4rem;
     font-weight: 900;
     @include lg {
       margin-top: 10rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
     @include md-lt {
       margin-top: 10rem;
@@ -226,7 +226,7 @@ main {
       font-size: 1.3rem;
     }
     @include xs {
-      margin-top: 6rem;
+      margin-top: 8rem;
       font-size: 1.2rem;
     }
   }

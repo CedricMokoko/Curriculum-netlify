@@ -21,22 +21,10 @@
   opacity: 1;
   transform: scale(1);
 }
+
 .animation-skills {
   transition: transform 0.2s ease;
   &:hover {
     transform: scale(1.1);
-  }
-}
-
-/* Button Form*/
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }
