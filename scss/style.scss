@@ -26,36 +26,31 @@ html {
   display: grid;
   grid:
     "picture header" auto
-    "aside main" 1fr
-    "footer footer" / 350px auto;
+    "aside main" 1fr / 350px auto;
   @include lg {
     grid:
       "picture header" auto
-      "aside main" 1fr
-      "footer footer" / 320px auto;
+      "aside main" 1fr / 320px auto;
   }
   @include md-lt {
     grid:
-      "header header" auto
-      "picture main" auto
-      "aside aside" auto
-      "footer footer" / 250px auto;
+      "header header " auto
+      "picture aside " auto
+      "main main" auto / 300px auto;
   }
   @include sm {
     grid:
       "header" auto
-      "main" auto
       "picture" auto
       "aside" auto
-      "footer" auto / auto;
+      "main" auto / auto;
   }
   @include xs {
     grid:
       "header" auto
-      "main" auto
       "picture" auto
       "aside" auto
-      "footer" auto / auto;
+      "main" auto / auto;
   }
 }
 
@@ -69,6 +64,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 1s;
   @include sm {
     padding: 4rem;
   }
@@ -82,18 +78,15 @@ header {
     font-weight: 300;
     letter-spacing: 3rem;
     @include lg {
-      letter-spacing: 2.5rem;
-      margin: 0;
+      letter-spacing: 3rem;
     }
     @include md-lt {
-      font-size: 4rem;
-      letter-spacing: 2rem;
-      margin: 0;
+      font-size: 5rem;
+      letter-spacing: 3rem;
     }
     @include sm {
-      font-size: 3rem;
-      letter-spacing: 1.5rem;
-      margin: 0;
+      font-size: 4rem;
+      letter-spacing: 2.5rem;
     }
     @include xs {
       font-size: 3rem;
@@ -118,17 +111,18 @@ header {
   grid-area: picture;
   padding: 6rem;
   background: var(--background);
+  transition: 1s;
   @include lg {
     padding: 6rem;
   }
   @include md-lt {
-    padding: 5rem;
+    padding: 6rem;
   }
   @include sm {
-    padding: 10rem;
+    padding: 12rem;
   }
   @include xs {
-    padding: 10rem;
+    padding: 8rem;
   }
   img {
     border-radius: 50%;
@@ -146,13 +140,13 @@ aside {
   padding: 5rem;
   animation: fadeIn 1s;
   @include md {
-    padding: 3rem 12rem;
+    padding: 3rem 5rem;
   }
   @include sm {
-    padding: 3rem 10rem;
+    padding: 3rem 5rem;
   }
   @include xs {
-    padding: 3rem 6rem;
+    padding: 3rem 2rem;
   }
   .block {
     margin-bottom: 5rem;
@@ -167,78 +161,6 @@ aside {
       @include xs {
         font-size: 1.5rem;
       }
-    }
-    .bar-skill {
-      cursor: pointer;
-      margin: 2rem 0;
-      height: 5px;
-      background: var(--hint);
-      position: relative;
-      .bar-skill-progress {
-        position: absolute;
-        height: 5px;
-        top: 0;
-        left: 0;
-        background: var(--light);
-      }
-      .bar-skill-dot {
-        position: absolute;
-        height: 10px;
-        width: 10px;
-        background: var(--dark);
-        top: -2.5px;
-        transform: rotate(45deg);
-      }
-    }
-    .stars-container {
-      display: flex;
-      margin: 2rem 0 3rem 0;
-      color: var(--hint);
-      i {
-        font-size: 1.5rem;
-        margin: 0 1rem;
-      }
-    }
-    .social-container {
-      margin-bottom: 1rem;
-      padding: 1rem 1rem;
-      border-radius: 5px;
-      transition: all 0.3s;
-      &:hover {
-        background: var(--border);
-        i {
-          color: var(--primary);
-          transform: scale(1.3);
-          transition: all 0.3s;
-        }
-      }
-      a {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        i {
-          align-self: first baseline;
-          margin-right: 1rem;
-          font-size: 2rem;
-        }
-      }
-    }
-  }
-  .legge {
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 900;
-    @include xl {
-      display: none;
-    }
-    @include lg {
-      display: none;
-    }
-    @include sm {
-      font-size: 1.3rem;
-    }
-    @include xs {
-      font-size: 1.3rem;
     }
   }
 }
@@ -289,96 +211,23 @@ main {
   .legge {
     margin-top: 15rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 900;
     @include lg {
       margin-top: 10rem;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
     @include md-lt {
-      display: none;
+      margin-top: 10rem;
+      font-size: 1.3rem;
     }
     @include sm {
-      display: none;
+      margin-top: 10rem;
+      font-size: 1.3rem;
     }
     @include xs {
-      display: none;
-    }
-  }
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  grid-area: footer;
-  padding: 5rem;
-  background: var(--text);
-  @include sm {
-    padding: 5rem 0rem;
-  }
-  @include xs {
-    padding: 5rem 0rem;
-  }
-  h2 {
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    letter-spacing: 0.5px;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    input {
-      margin-bottom: 2rem;
-      outline: none;
-      border: 0;
-      min-width: 250px;
-      padding: 1rem;
-      line-height: 2rem;
-      border-radius: 0.5rem;
-      transition: transform 0.2s ease;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-    textarea {
-      resize: none;
-      outline: none;
-      border: 0;
-      min-width: 250px;
-      padding: 1rem;
-      line-height: 2rem;
-      border-radius: 0.5rem;
-      transition: transform 0.2s ease;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-    button {
-      margin-top: 2rem;
-      background: var(--text);
-      border: 0;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:hover {
-        opacity: 0.8;
-        animation: pulse 0.5s infinite;
-      }
-      .postfix {
-        background: linear-gradient(to right, var(--dark), var(--light));
-        padding: 1rem 2rem;
-        color: white;
-        font-size: 2rem;
-        border-radius: 0.5rem;
-        min-width: 250px;
-        span {
-          margin-left: 1rem;
-        }
-      }
+      margin-top: 6rem;
+      font-size: 1.2rem;
     }
   }
 }

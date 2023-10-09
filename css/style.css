@@ -176,26 +176,26 @@ html {
 .grid-container {
   min-height: 100vh;
   display: grid;
-  grid: "picture header" auto "aside main" 1fr "footer footer"/350px auto;
+  grid: "picture header" auto "aside main" 1fr/350px auto;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .grid-container {
-    grid: "picture header" auto "aside main" 1fr "footer footer"/320px auto;
+    grid: "picture header" auto "aside main" 1fr/320px auto;
   }
 }
 @media (max-width: 992px) {
   .grid-container {
-    grid: "header header" auto "picture main" auto "aside aside" auto "footer footer"/250px auto;
+    grid: "header header " auto "picture aside " auto "main main" auto/300px auto;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
   .grid-container {
-    grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto/auto;
+    grid: "header" auto "picture" auto "aside" auto "main" auto/auto;
   }
 }
 @media (max-width: 576px) {
   .grid-container {
-    grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto/auto;
+    grid: "header" auto "picture" auto "aside" auto "main" auto/auto;
   }
 }
 
@@ -209,6 +209,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 1s;
 }
 @media (min-width: 577px) and (max-width: 767px) {
   header {
@@ -229,22 +230,19 @@ header h1 {
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   header h1 {
-    letter-spacing: 2.5rem;
-    margin: 0;
+    letter-spacing: 3rem;
   }
 }
 @media (max-width: 992px) {
   header h1 {
-    font-size: 4rem;
-    letter-spacing: 2rem;
-    margin: 0;
+    font-size: 5rem;
+    letter-spacing: 3rem;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
   header h1 {
-    font-size: 3rem;
-    letter-spacing: 1.5rem;
-    margin: 0;
+    font-size: 4rem;
+    letter-spacing: 2.5rem;
   }
 }
 @media (max-width: 576px) {
@@ -272,6 +270,7 @@ header span {
   grid-area: picture;
   padding: 6rem;
   background: var(--background);
+  transition: 1s;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .picture {
@@ -280,17 +279,17 @@ header span {
 }
 @media (max-width: 992px) {
   .picture {
-    padding: 5rem;
+    padding: 6rem;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
   .picture {
-    padding: 10rem;
+    padding: 12rem;
   }
 }
 @media (max-width: 576px) {
   .picture {
-    padding: 10rem;
+    padding: 8rem;
   }
 }
 .picture img {
@@ -310,17 +309,17 @@ aside {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   aside {
-    padding: 3rem 12rem;
+    padding: 3rem 5rem;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
   aside {
-    padding: 3rem 10rem;
+    padding: 3rem 5rem;
   }
 }
 @media (max-width: 576px) {
   aside {
-    padding: 3rem 6rem;
+    padding: 3rem 2rem;
   }
 }
 aside .block {
@@ -338,86 +337,6 @@ aside .block p {
 @media (max-width: 576px) {
   aside .block p {
     font-size: 1.5rem;
-  }
-}
-aside .block .bar-skill {
-  cursor: pointer;
-  margin: 2rem 0;
-  height: 5px;
-  background: var(--hint);
-  position: relative;
-}
-aside .block .bar-skill .bar-skill-progress {
-  position: absolute;
-  height: 5px;
-  top: 0;
-  left: 0;
-  background: var(--light);
-}
-aside .block .bar-skill .bar-skill-dot {
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  background: var(--dark);
-  top: -2.5px;
-  transform: rotate(45deg);
-}
-aside .block .stars-container {
-  display: flex;
-  margin: 2rem 0 3rem 0;
-  color: var(--hint);
-}
-aside .block .stars-container i {
-  font-size: 1.5rem;
-  margin: 0 1rem;
-}
-aside .block .social-container {
-  margin-bottom: 1rem;
-  padding: 1rem 1rem;
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-aside .block .social-container:hover {
-  background: var(--border);
-}
-aside .block .social-container:hover i {
-  color: var(--primary);
-  transform: scale(1.3);
-  transition: all 0.3s;
-}
-aside .block .social-container a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-aside .block .social-container a i {
-  align-self: first baseline;
-  margin-right: 1rem;
-  font-size: 2rem;
-}
-aside .legge {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 900;
-}
-@media (min-width: 1201px) {
-  aside .legge {
-    display: none;
-  }
-}
-@media (min-width: 993px) and (max-width: 1200px) {
-  aside .legge {
-    display: none;
-  }
-}
-@media (min-width: 577px) and (max-width: 767px) {
-  aside .legge {
-    font-size: 1.3rem;
-  }
-}
-@media (max-width: 576px) {
-  aside .legge {
-    font-size: 1.3rem;
   }
 }
 
@@ -471,109 +390,32 @@ main .experience .content p {
 main .legge {
   margin-top: 15rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 900;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   main .legge {
     margin-top: 10rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 992px) {
   main .legge {
-    display: none;
+    margin-top: 10rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 577px) and (max-width: 767px) {
   main .legge {
-    display: none;
+    margin-top: 10rem;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 576px) {
   main .legge {
-    display: none;
+    margin-top: 6rem;
+    font-size: 1.2rem;
   }
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  grid-area: footer;
-  padding: 5rem;
-  background: var(--text);
-}
-@media (min-width: 577px) and (max-width: 767px) {
-  footer {
-    padding: 5rem 0rem;
-  }
-}
-@media (max-width: 576px) {
-  footer {
-    padding: 5rem 0rem;
-  }
-}
-footer h2 {
-  margin-bottom: 3rem;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
-}
-footer form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-footer form input {
-  margin-bottom: 2rem;
-  outline: none;
-  border: 0;
-  min-width: 250px;
-  padding: 1rem;
-  line-height: 2rem;
-  border-radius: 0.5rem;
-  transition: transform 0.2s ease;
-}
-footer form input:hover {
-  transform: scale(1.1);
-}
-footer form textarea {
-  resize: none;
-  outline: none;
-  border: 0;
-  min-width: 250px;
-  padding: 1rem;
-  line-height: 2rem;
-  border-radius: 0.5rem;
-  transition: transform 0.2s ease;
-}
-footer form textarea:hover {
-  transform: scale(1.1);
-}
-footer form button {
-  margin-top: 2rem;
-  background: var(--text);
-  border: 0;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-footer form button:hover {
-  opacity: 0.8;
-  animation: pulse 0.5s infinite;
-}
-footer form button .postfix {
-  background: linear-gradient(to right, var(--dark), var(--light));
-  padding: 1rem 2rem;
-  color: white;
-  font-size: 2rem;
-  border-radius: 0.5rem;
-  min-width: 250px;
-}
-footer form button .postfix span {
-  margin-left: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
