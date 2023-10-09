@@ -270,7 +270,7 @@ header span {
   grid-area: picture;
   padding: 6rem;
   background: var(--background);
-  transition: 1s;
+  transition: 1s ease-in-out;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .picture {
@@ -284,12 +284,12 @@ header span {
 }
 @media (min-width: 577px) and (max-width: 767px) {
   .picture {
-    padding: 12rem;
+    padding: 14rem;
   }
 }
 @media (max-width: 576px) {
   .picture {
-    padding: 8rem;
+    padding: 10rem;
   }
 }
 .picture img {
@@ -314,12 +314,12 @@ aside {
 }
 @media (min-width: 577px) and (max-width: 767px) {
   aside {
-    padding: 3rem 5rem;
+    padding: 3rem 8rem;
   }
 }
 @media (max-width: 576px) {
   aside {
-    padding: 3rem 2rem;
+    padding: 3rem 6rem;
   }
 }
 aside .block {

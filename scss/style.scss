@@ -111,7 +111,7 @@ header {
   grid-area: picture;
   padding: 6rem;
   background: var(--background);
-  transition: 1s;
+  transition: 1s ease-in-out;
   @include lg {
     padding: 6rem;
   }
@@ -119,10 +119,10 @@ header {
     padding: 6rem;
   }
   @include sm {
-    padding: 12rem;
+    padding: 14rem;
   }
   @include xs {
-    padding: 8rem;
+    padding: 10rem;
   }
   img {
     border-radius: 50%;
@@ -143,10 +143,10 @@ aside {
     padding: 3rem 5rem;
   }
   @include sm {
-    padding: 3rem 5rem;
+    padding: 3rem 8rem;
   }
   @include xs {
-    padding: 3rem 2rem;
+    padding: 3rem 6rem;
   }
   .block {
     margin-bottom: 5rem;
