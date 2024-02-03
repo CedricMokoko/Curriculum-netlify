@@ -34,7 +34,6 @@ ul {
 
 a {
   color: var(--text);
-  text-decoration: none;
   background-color: transparent;
 }
 
@@ -123,11 +122,11 @@ html {
 .grid-container {
   min-height: 100vh;
   display: grid;
-  grid: "picture header" auto "aside main" 1fr/350px auto;
+  grid: "picture header" auto "aside main" 1fr/400px auto;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .grid-container {
-    grid: "picture header" auto "aside main" 1fr/320px auto;
+    grid: "picture header" auto "aside main" 1fr/360px auto;
   }
 }
 @media (max-width: 992px) {

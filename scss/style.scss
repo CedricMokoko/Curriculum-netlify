@@ -26,11 +26,11 @@ html {
   display: grid;
   grid:
     "picture header" auto
-    "aside main" 1fr / 350px auto;
+    "aside main" 1fr / 400px auto;
   @include lg {
     grid:
       "picture header" auto
-      "aside main" 1fr / 320px auto;
+      "aside main" 1fr / 360px auto;
   }
   @include md-lt {
     grid:
